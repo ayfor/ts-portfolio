@@ -1,5 +1,6 @@
 ---
-
+import Image from "astro/components/Image.astro";
+import tsLogo from "../content/images/ts-logo.svg";
 ---
 
 <!doctype html>
@@ -7,54 +8,51 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
-	<body>
-		<main>
-			<div class="mt-16 sm:mt-32">
-      <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        <div class="lg:pl-20">
-          <div class="max-w-xs px-2.5 lg:max-w-none">
+	<body >
+		<main class="h-screen w-screen bg-off-white">
+			<div class="bg-white">
+        <header class="absolute inset-x-0 top-0 z-50">
+          <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+              <a href="#" class="-m-1.5 p-1.5">
+                <Image src={tsLogo} alt="Twin Pines Studios Logo" class="h-16 w-auto" />
+              </a>
+            </div>
+          </nav>
+        </header>
+        <div class="bg-white">
+          <div class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
+            <div class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
+              <div class="px-6 lg:px-0 lg:pt-4">
+                <div class="mx-auto max-w-2xl">
+                  <div class="max-w-lg">
+                    <div class="mt-24 sm:mt-32 lg:mt-16">
+                      <a href="#" class="inline-flex space-x-6">
+                        <span class="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">What's new</span>
+                        <span class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
+                          <span>Just shipped v0.1.0</span>
+                          <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                    <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Supercharge your web applications</h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                    <div class="mt-10 flex items-center gap-x-6">
+                      <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Documentation</a>
+                      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">View on GitHub <span aria-hidden="true">→</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
+                second section of screen
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="lg:order-first lg:row-span-2">
-          <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
-          </h1>
-          <div class="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-            <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
-            </p>
-            <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
-            </p>
-            <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
-            </p>
-            <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
-            </p>
-          </div>
-        </div>
-        <div class="lg:pl-20">
-          <ul role="list">
-           
-          </ul>
         </div>
       </div>
-    </div>
+    </main>
 	</body>
 </html>
