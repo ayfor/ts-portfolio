@@ -1,6 +1,15 @@
 ---
+// --- Components
 import Image from "astro/components/Image.astro";
-import TwinSpruceLogo from "../content/images/ts-logo.svg";
+// -- SVGs
+import tssLogo from "../content/icons/ts-logo.svg?raw";
+import devLogo from "../content/icons/command-line-logo.svg?raw";
+import githubLogo from "../content/icons/contacts/github-logo.svg?raw";
+import linkedinLogo from "../content/icons/contacts/linkedin-logo.svg?raw";
+import gumroadLogo from "../content/icons/contacts/gumroad-logo.svg?raw";
+import xLogo from "../content/icons/contacts/x-logo.svg?raw";
+// -- Images
+import topographImg from "../content/images/vector-black-topographic-map-lines-background.jpg";
 ---
 
 <!doctype html>
@@ -18,7 +27,7 @@ import TwinSpruceLogo from "../content/images/ts-logo.svg";
           <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
               <a href="#" class="my-3 mx-6">
-                <Image src={TwinSpruceLogo} alt="Twin Pines Studios Logo" class="h-16 w-auto" />
+                <Fragment set:html={tssLogo} alt="Twin Pines Studios Logo" class="h-16 w-auto" />
               </a>
             </div>
           </nav>
@@ -31,19 +40,13 @@ import TwinSpruceLogo from "../content/images/ts-logo.svg";
                 <div class="mx-auto max-w-2xl">
                   <div class="mt-24 sm:mt-32 lg:mt-16">
                     <a href="#" class="inline-flex space-x-6">
-                      <span class="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">What's new</span>
-                      <span class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
-                        <span>Just shipped v0.1.0</span>
-                        <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                          <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
-                        </svg>
-                      </span>
+                      <span class="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">Welcome to</span>
                     </a>
                   </div>
                   <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 uppercase sm:text-6xl">Twin Spruce Studios</h1>
                   <p class="my-6 text-lg leading-8 text-gray-600">I deliver grounded, practical solutions to abstract problems that meet your needs.</p>
                   <div class="group flex items-center gap-x-6">
-                    <a href="#" class="text-lg font-semibold leading-6 text-gray-900 transition ease-in-out hover:scale-110">Learn More<span class="ml-2 transition ease-in-out group-hover:text-blue-highlight group-hover:translate-x-3" aria-hidden="true">→</span></a>
+                    <a href="#" class="text-lg font-semibold leading-6 text-gray-900 transition ease-in-out hover:scale-110">Learn More<span class="ml-2 transition ease-in-out group-hover:text-red-highlight group-hover:translate-x-3" aria-hidden="true">→</span></a>
                   </div>
                 </div>
               </div>
@@ -51,10 +54,10 @@ import TwinSpruceLogo from "../content/images/ts-logo.svg";
               <div class="sm:mx-28 mt-20 sm:mt-24 md:max-w-2xl lg:mt-0 lg:w-screen">
                 <div class="flex flex-row justify-center items-center">
                   <!-- Business Card -->
-                  <div class="flex flex-col justify-between rounded-2xl bg-off-black w-112 h-144 p-6 text-off-white">
-                    <div class="flex flex-row w-full">
-                      <div class="h-16 w-16">
-                        <!-- dev icon -->
+                  <div class="flex flex-col justify-between rounded-2xl bg-off-black w-112 h-160 p-6 text-off-white">
+                    <div class="flex flex-row w-full items-center">
+                      <div class="flex-none h-14 w-14 mr-2">
+                        <Fragment set:html={devLogo} alt="Command Line Logo" class="h-full w-full" />
                       </div>
                       <div class="flex flex-col max-w-5xl">
                         <h1 class="uppercase text-3xl">
@@ -70,22 +73,26 @@ import TwinSpruceLogo from "../content/images/ts-logo.svg";
                         </div>
                       </div>
                     </div>
-                    <div class="w-full h-36 bg-off-white rounded-xl my-6">
-                      <!-- image -->
+                    <div class="w-full h-36 rounded-xl mt-2 mb-6">
+                      <Image src={topographImg} alt="Topographic Map" class="object-cover h-full w-full rounded-xl" />
                     </div>
                     <div class="grid grid-cols-2 gap-4 my-8">
-                      <p class="text-sm">
-                        <span class="font-bold">Email:</span>
-                      </p>
-                      <p class="text-sm">
-                        <span class="font-bold">Phone:</span>
-                      </p>
-                      <p class="text-sm">
-                        <span class="font-bold">Website:</span>
-                      </p>
-                      <p class="text-sm">
-                        <span class="font-bold">Github:</span>
-                      </p>
+                      <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
+                        <Fragment set:html={githubLogo} alt="GitHub Logo"/>
+                        <span class="ml-2 inline">Follow on GitHub</span>
+                      </div>
+                      <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
+                        <Fragment set:html={linkedinLogo} alt="LinkedIn Logo"/>
+                        <span class="ml-2 inline">Connect on LinkedIn</span>
+                      </div>
+                      <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
+                        <Fragment set:html={xLogo} alt="X Logo"/>
+                        <span class="ml-2 inline">Follow on X</span>
+                      </div>
+                      <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
+                        <Fragment set:html={gumroadLogo} alt="Gumroad Logo"/>
+                        <span class="ml-2 inline">Shop on Gumroad</span>
+                      </div>
                     </div>
                     <div class="grid grid-row-2 gap-4 h-100">
                       <button class="w-full h-12 rounded-xl bg-transparent border-solid border-2 border-off-white">
