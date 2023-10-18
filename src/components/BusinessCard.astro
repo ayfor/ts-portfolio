@@ -1,0 +1,65 @@
+---
+// --- Components ---
+import Image from "astro/components/Image.astro";
+// -- SVGs -- 
+import devLogo from "../content/icons/command-line-logo.svg?raw";
+import githubLogo from "../content/icons/contacts/github-logo.svg?raw";
+import linkedinLogo from "../content/icons/contacts/linkedin-logo.svg?raw";
+import gumroadLogo from "../content/icons/contacts/gumroad-logo.svg?raw";
+import xLogo from "../content/icons/contacts/x-logo.svg?raw";
+// -- Images --
+import topographImg from "../content/images/vector-black-topographic-map-lines-background.jpg";
+---
+<div class="sm:mx-28 mt-20 sm:mt-24 md:max-w-2xl lg:mt-0 lg:w-screen">
+  <div class="flex flex-row justify-center items-center">
+    <!-- Business Card -->
+    <div class="flex flex-col justify-between rounded-2xl bg-off-black w-112 h-160 p-6 text-off-white">
+      <div class="flex flex-row w-full items-center">
+        <div class="flex-none h-14 w-14 mr-2">
+          <Fragment set:html={devLogo} alt="Command Line Logo" class="h-full w-full" />
+        </div>
+        <div class="flex flex-col max-w-5xl">
+          <h1 class="uppercase text-3xl">
+            Joshua Stubbington
+          </h1>
+          <div class="flex flex-row justify-between">
+            <p class="text-sm">
+              Software Engineer
+            </p>
+            <p class="text-sm">
+              Ottawa, Ontario
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-36 rounded-xl mt-2 mb-6">
+        <Image src={topographImg} alt="Topographic Map" class="object-cover h-full w-full rounded-xl" />
+      </div>
+      <div class="grid grid-cols-2 gap-4 my-8">
+        <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
+          <Fragment set:html={githubLogo} alt="GitHub Logo"/>
+          <span class="ml-2 inline">Follow on GitHub</span>
+        </div>
+        <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
+          <Fragment set:html={linkedinLogo} alt="LinkedIn Logo"/>
+          <span class="ml-2 inline">Connect on LinkedIn</span>
+        </div>
+        <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
+          <Fragment set:html={xLogo} alt="X Logo"/>
+          <span class="ml-2 inline">Follow on X</span>
+        </div>
+        <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
+          <Fragment set:html={gumroadLogo} alt="Gumroad Logo"/>
+          <span class="ml-2 inline">Shop on Gumroad</span>
+        </div>
+      </div>
+      <div class="grid grid-row-2 gap-4 h-100">
+        <button class="w-full h-12 rounded-xl bg-transparent border-solid border-2 border-off-white">
+          Download Resume
+        </button>
+        <button class="w-full h-12 rounded-xl bg-blue-highlight">
+          Contact Me
+        </button>
+      </div>
+  </div>
+</div>

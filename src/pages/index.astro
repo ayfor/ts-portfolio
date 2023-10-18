@@ -1,15 +1,9 @@
 ---
-// --- Components
-import Image from "astro/components/Image.astro";
-// -- SVGs
+// -- Components --
+import BusinessCard from "../components/BusinessCard.astro";
+import HeroSection from "../components/HeroSection.astro";
+// -- SVGs --
 import tssLogo from "../content/icons/ts-logo.svg?raw";
-import devLogo from "../content/icons/command-line-logo.svg?raw";
-import githubLogo from "../content/icons/contacts/github-logo.svg?raw";
-import linkedinLogo from "../content/icons/contacts/linkedin-logo.svg?raw";
-import gumroadLogo from "../content/icons/contacts/gumroad-logo.svg?raw";
-import xLogo from "../content/icons/contacts/x-logo.svg?raw";
-// -- Images
-import topographImg from "../content/images/vector-black-topographic-map-lines-background.jpg";
 ---
 
 <!doctype html>
@@ -19,10 +13,13 @@ import topographImg from "../content/images/vector-black-topographic-map-lines-b
 	</head>
 	<body >
 		<main class="h-screen w-screen">
+      <!-- Upper Background Gradient -->
       <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
         <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
       </div>
+      <!-- Content -->
       <div>
+        <!-- Header -->
         <header class="absolute inset-x-0 top-0 z-50">
           <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
@@ -32,82 +29,36 @@ import topographImg from "../content/images/vector-black-topographic-map-lines-b
             </div>
           </nav>
         </header>
+        <!-- Main Content -->
         <div class="bg-white">
           <div class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
-            <div class="mx-auto max-w-8xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
-              <!-- Hero Section -->
-              <div class="px-6 lg:px-0 lg:pt-4">
-                <div class="mx-auto max-w-2xl">
-                  <div class="mt-24 sm:mt-32 lg:mt-16">
-                    <a href="#" class="inline-flex space-x-6">
-                      <span class="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">Welcome to</span>
-                    </a>
-                  </div>
-                  <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 uppercase sm:text-6xl">Twin Spruce Studios</h1>
-                  <p class="my-6 text-lg leading-8 text-gray-600">I deliver grounded, practical solutions to abstract problems that meet your needs.</p>
-                  <div class="group flex items-center gap-x-6">
-                    <a href="#" class="text-lg font-semibold leading-6 text-gray-900 transition ease-in-out hover:scale-110">Learn More<span class="ml-2 transition ease-in-out group-hover:text-red-highlight group-hover:translate-x-3" aria-hidden="true">→</span></a>
-                  </div>
-                </div>
-              </div>
-              <!-- Business Card Section-->
-              <div class="sm:mx-28 mt-20 sm:mt-24 md:max-w-2xl lg:mt-0 lg:w-screen">
-                <div class="flex flex-row justify-center items-center">
-                  <!-- Business Card -->
-                  <div class="flex flex-col justify-between rounded-2xl bg-off-black w-112 h-160 p-6 text-off-white">
-                    <div class="flex flex-row w-full items-center">
-                      <div class="flex-none h-14 w-14 mr-2">
-                        <Fragment set:html={devLogo} alt="Command Line Logo" class="h-full w-full" />
-                      </div>
-                      <div class="flex flex-col max-w-5xl">
-                        <h1 class="uppercase text-3xl">
-                          Joshua Stubbington
-                        </h1>
-                        <div class="flex flex-row justify-between">
-                          <p class="text-sm">
-                            Software Engineer
-                          </p>
-                          <p class="text-sm">
-                            Ottawa, Ontario
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-full h-36 rounded-xl mt-2 mb-6">
-                      <Image src={topographImg} alt="Topographic Map" class="object-cover h-full w-full rounded-xl" />
-                    </div>
-                    <div class="grid grid-cols-2 gap-4 my-8">
-                      <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
-                        <Fragment set:html={githubLogo} alt="GitHub Logo"/>
-                        <span class="ml-2 inline">Follow on GitHub</span>
-                      </div>
-                      <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
-                        <Fragment set:html={linkedinLogo} alt="LinkedIn Logo"/>
-                        <span class="ml-2 inline">Connect on LinkedIn</span>
-                      </div>
-                      <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
-                        <Fragment set:html={xLogo} alt="X Logo"/>
-                        <span class="ml-2 inline">Follow on X</span>
-                      </div>
-                      <div class="flex items-center text-sm font-light hover:text-blue-highlight cursor-pointer">
-                        <Fragment set:html={gumroadLogo} alt="Gumroad Logo"/>
-                        <span class="ml-2 inline">Shop on Gumroad</span>
-                      </div>
-                    </div>
-                    <div class="grid grid-row-2 gap-4 h-100">
-                      <button class="w-full h-12 rounded-xl bg-transparent border-solid border-2 border-off-white">
-                        Download Resume
-                      </button>
-                      <button class="w-full h-12 rounded-xl bg-blue-highlight">
-                        Contact Me
-                      </button>
-                    </div>
-                </div>
+            <div class="mx-auto max-w-8xl pb-24 pt-10 sm:pb-32">
+              <!-- Nav -->
+              <!-- <ul class="grid grid-cols-1 gap-4 place-content-center self-center w-min" role="list">
+                <li class="col-span-1 flex rounded-md shadow-sm w-20 h-20 bg-off-black">
+                  <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-off-white">Home</div>
+                </li>
+                <li class="col-span-1 flex rounded-md shadow-sm w-20 h-20 bg-off-black">
+                  <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-off-white">Home</div>
+                </li>
+                <li class="col-span-1 flex rounded-md shadow-sm w-20 h-20 bg-off-black">
+                  <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-off-white">Home</div>
+                </li>
+                <li class="col-span-1 flex rounded-md shadow-sm w-20 h-20 bg-off-black">
+                  <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-off-white">Home</div>
+                </li>
+              </ul> -->
+              <div class="inline lg:grid lg:grid-cols-2 lg:gap-x-2 lg:px-8 lg:py-40">
+                <!-- Hero Section -->
+                <HeroSection />
+                <!-- Business Card Section-->
+                <BusinessCard />
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!--Lower Background Gradient -->
       <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
         <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
       </div>
