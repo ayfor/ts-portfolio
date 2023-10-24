@@ -17,9 +17,12 @@ module.exports = {
 		extend: {
 			spacing: {
 				'0i': '0px !important',
+				'84': '21rem',
+				'100': '25rem',
 				'112': '28rem',
 				'128': '32rem',
 				'144': '36rem',
+				'152': '38rem',
 				'160': '40rem',
 			},
 			maxWidth: {

@@ -2,6 +2,7 @@
 // -- Components --
 import BusinessCard from "../components/BusinessCard.astro";
 import HeroSection from "../components/HeroSection.astro";
+import Sidebar from "../components/Sidebar.astro";
 // -- SVGs --
 import tssLogo from "../content/icons/ts-logo.svg?raw";
 ---
@@ -12,6 +13,7 @@ import tssLogo from "../content/icons/ts-logo.svg?raw";
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
 	<body >
+    <Sidebar />
 		<main class="h-screen w-screen">
       <!-- Upper Background Gradient -->
       <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
@@ -21,7 +23,7 @@ import tssLogo from "../content/icons/ts-logo.svg?raw";
       <div>
         <!-- Header -->
         <header class="absolute inset-x-0 top-0 z-50">
-          <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <nav class="flex items-center justify-between p-6" aria-label="Global">
             <div class="flex lg:flex-1">
               <a href="#" class="my-3 mx-6">
                 <Fragment set:html={tssLogo} alt="Twin Pines Studios Logo" class="h-16 w-auto" />
@@ -33,22 +35,7 @@ import tssLogo from "../content/icons/ts-logo.svg?raw";
         <div class="bg-white">
           <div class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
             <div class="mx-auto max-w-8xl pb-24 pt-10 sm:pb-32">
-              <!-- Nav -->
-              <!-- <ul class="grid grid-cols-1 gap-4 place-content-center self-center w-min" role="list">
-                <li class="col-span-1 flex rounded-md shadow-sm w-20 h-20 bg-off-black">
-                  <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-off-white">Home</div>
-                </li>
-                <li class="col-span-1 flex rounded-md shadow-sm w-20 h-20 bg-off-black">
-                  <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-off-white">Home</div>
-                </li>
-                <li class="col-span-1 flex rounded-md shadow-sm w-20 h-20 bg-off-black">
-                  <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-off-white">Home</div>
-                </li>
-                <li class="col-span-1 flex rounded-md shadow-sm w-20 h-20 bg-off-black">
-                  <div class="flex w-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-off-white">Home</div>
-                </li>
-              </ul> -->
-              <div class="inline lg:grid lg:grid-cols-2 lg:gap-x-2 lg:px-8 lg:py-40">
+              <div class="inline px-32 lg:grid lg:grid-cols-2 lg:gap-x-2 lg:py-32">
                 <!-- Hero Section -->
                 <HeroSection />
                 <!-- Business Card Section-->
