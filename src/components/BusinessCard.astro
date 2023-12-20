@@ -13,16 +13,17 @@ import xLogo from "../content/icons/contacts/x-logo.svg?raw";
 <div class="flex justify-center max-w-2xl w-full">
   <div class="flex flex-col justify-between items-center">
     <!-- Business Card -->
-    <div class="flex flex-col justify-between rounded-2xl bg-off-black min-w-fit w-112 h-96 p-6 text-off-white">
+    <div class="flex flex-col justify-between rounded-2xl bg-off-black-transparent shadow-lg min-w-fit w-112 h-96 p-6 text-off-white">
       <div class="flex flex-row w-full items-center">
         <!-- <div class="flex-none h-14 w-14 mr-2">
           <Fragment set:html={devLogo} alt="Command Line Logo" class="h-full w-full" />
         </div> -->
         <div class="flex flex-col w-full">
-          <div class="absolute h-12 w-12 grid grid-cols-2 gap-cols-px justify-items-center animate-spin-xslow">
+          <!-- Spinner -->
+          <div class="absolute h-12 w-12 grid grid-cols-2 gap-cols-px justify-items-center animate-spin-slow">
             <div class="relative ml-2 bg-blue-highlight rounded-full h-12 w-12 blur-lg"></div>
             <div class="relative mr-2 bg-purple-highlight rounded-full h-12 w-12 blur-lg"></div>
-            <div class="relative -mt-8 bg-red-highlight rounded-full h-12 w-12 blur-lg"></div>
+            <!-- <div class="relative -mt-12 bg-red-highlight rounded-full h-12 w-12 blur-lg"></div> -->
           </div>
           <div class="mb-4 flex flex-row justify-end">
             <h1 class="uppercase text-3xl font-bold">
@@ -61,11 +62,11 @@ import xLogo from "../content/icons/contacts/x-logo.svg?raw";
           <span class="ml-2 inline">Shop on Gumroad</span>
         </div>
       </div>
-      <div class="grid grid-row-2 gap-4 h-fit mx-2">
-        <button class="w-full h-12 rounded-xl bg-transparent border-solid border-2 border-off-white">
+      <div class="grid grid-row-2 gap-4 h-fit mx-2 font-semibold">
+        <button class="w-full h-12 rounded-xl bg-transparent border-solid border-2 border-off-white-transparent-dark hover:border-blue-highlight shadow-sm hover:shadow-lg ease-in-out duration-300 hover:scale-105 transition">
           Download Resume
         </button>
-        <button class="w-full h-12 rounded-xl bg-blue-highlight">
+        <button class="w-full h-12 rounded-xl bg-off-white-transparent hover:bg-purple-highlight shadow-sm hover:shadow-lg ease-in-out duration-300 hover:scale-105 transition">
           Contact Me
         </button>
       </div>
