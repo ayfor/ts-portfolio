@@ -19,16 +19,21 @@ import xLogo from "../content/icons/contacts/x-logo.svg?raw";
           <Fragment set:html={devLogo} alt="Command Line Logo" class="h-full w-full" />
         </div> -->
         <div class="flex flex-col w-full">
-          <div class="flex flex-row justify-center">
-            <h1 class="uppercase text-4xl">
+          <div class="absolute h-12 w-12 grid grid-cols-2 gap-cols-px justify-items-center animate-spin-xslow">
+            <div class="relative ml-2 bg-blue-highlight rounded-full h-12 w-12 blur-lg"></div>
+            <div class="relative mr-2 bg-purple-highlight rounded-full h-12 w-12 blur-lg"></div>
+            <div class="relative -mt-8 bg-red-highlight rounded-full h-12 w-12 blur-lg"></div>
+          </div>
+          <div class="mb-4 flex flex-row justify-end">
+            <h1 class="uppercase text-3xl font-bold">
               Joshua Stubbington
             </h1>
           </div>
           <div class="flex flex-row justify-between px-1">
-            <p class="text-sm">
+            <p class="text-sm font-medium">
               Software Engineer
             </p>
-            <p class="text-sm">
+            <p class="text-sm font-medium">
               Ottawa, Ontario
             </p>
           </div>

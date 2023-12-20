@@ -30,6 +30,15 @@ module.exports = {
 				'8xl': '88rem',
 				'9xl': '96rem',
 			},
+			fontSize: {
+				'3.5xl': '2rem',
+				'3.75xl': '2.15rem',
+			},
+			animation: {
+				'fade-in': 'fadeIn 0.5s ease-in-out',
+        'spin-slow': 'spin 3s linear infinite',
+        'spin-xslow': 'spin 6s linear infinite',
+			},
 		}
 	}
 };
