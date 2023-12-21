@@ -43,6 +43,11 @@ module.exports = {
         'spin-slow': 'spin 3s linear infinite',
         'spin-xslow': 'spin 6s linear infinite',
 			},
+			screens: {
+				'single-col': '1400px',
+				'wide': '1800px',
+				'ultra-wide': '2000px',
+			},
 		}
 	}
 };
