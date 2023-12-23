@@ -16,6 +16,7 @@ module.exports = {
 			'blue-highlight': '#45CAFF',
 			'purple-highlight': '#826AED',
 			'red-highlight': '#C42021',
+			'transparent': 'transparent',
 		},
 		extend: {
 			fontFamily: {

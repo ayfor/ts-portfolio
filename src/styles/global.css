@@ -52,4 +52,10 @@
 		font-style: normal;
 		font-display: swap;
 	}
+
+  .outlined {
+    font-size: 2.5em;
+    margin: 0;
+    -webkit-text-stroke: 3px #040403;
+  }
 }
