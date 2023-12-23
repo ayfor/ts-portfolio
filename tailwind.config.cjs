@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 import typographyPlugin from '@tailwindcss/typography'
 
 module.exports = {
@@ -17,6 +18,10 @@ module.exports = {
 			'red-highlight': '#C42021',
 		},
 		extend: {
+			fontFamily: {
+				display: ["Rubik"],
+				sans: ["Rubik", ...defaultTheme.fontFamily.sans],
+			},
 			spacing: {
 				'1/20': '5%',
 				'1/10': '10%',
@@ -44,7 +49,7 @@ module.exports = {
         'spin-xslow': 'spin 6s linear infinite',
 			},
 			screens: {
-				'single-col': '1400px',
+				'multi-col': '1380px',
 				'wide': '1800px',
 				'ultra-wide': '2000px',
 			},

@@ -1,7 +1,9 @@
 ---
+import '../styles/global.css';
 // -- Components --
 import BusinessCard from "../components/BusinessCard.astro";
 import HeroSection from "../components/HeroSection.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
 import Sidebar from "../components/Sidebar.astro";
 // -- SVGs --
 import tssLogo from "../content/icons/ts-logo.svg?raw";
@@ -23,7 +25,7 @@ import tssLogo from "../content/icons/ts-logo.svg?raw";
       <div>
         <!-- Header -->
         <header class="absolute inset-x-0 top-0 z-50">
-          <nav class="flex items-center justify-between py-1 px-6 md:p-6" aria-label="Global">
+          <nav class="flex items-center justify-between py-1 px-6 wide:p-6" aria-label="Global">
             <div class="flex lg:flex-1">
               <a href="#" class="my-3 mx-4">
                 <Fragment set:html={tssLogo} alt="Twin Pines Studios Logo" class="h-16 w-auto" />
@@ -38,8 +40,11 @@ import tssLogo from "../content/icons/ts-logo.svg?raw";
               <div class="inline md:grid-cols-1 lg:grid lg:justify-items-start lg:gap-x-2 lg:py-18">
                 <!-- Hero Section -->
                 <HeroSection />
-                <!-- Business Card Section-->
+                <!-- Business Card Section -->
                 <BusinessCard />
+                <!-- Projects Section -->
+                <ProjectsSection />
+
               </div>
             </div>
           </div>
