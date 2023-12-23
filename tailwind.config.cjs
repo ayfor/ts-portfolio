@@ -2,7 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 import typographyPlugin from '@tailwindcss/typography'
 
 module.exports = {
-	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,ttf}"],
 	plugins: [typographyPlugin],
 	theme: {
 		colors: {
