@@ -6,20 +6,41 @@ import LeftoversLogo from "../content/images/LEFTOVERS_LOGO.png";
 ---
 <div class="grid grid-cols-1 gap-10 w-full my-40">
   <h1 class="relative bottom-4 right-12 text-9xl uppercase outlined text-transparent">Projects</h1>
-  <div class="flex flex-col min-h-content w-5/6 rounded-xl text-off-black font-regular shadow-md p-4">
+  <!-- Leftovers Project Card -->
+  <div class="flex flex-col min-h-content w-5/6 text-off-black font-regular rounded-md shadow-md bg-gradient-to-b from-off-black-transparent-regular to-off-black-transparent-light">
     <!-- Project Tile Header -->
-    <div class="h-40 flex flex-row">
-      <Image src={LeftoversLogo} alt="Leftovers Logo" class="w-36 h-36" />
-      <h1 class="w-fit text-7xl px-5 font-medium bg-off-white-transparent-dark backdrop-blur-md">
-        Leftovers
-      </h1>
+    <div class="h-fit-content flex flex-col bg-off-white-transparent drop-shadow-2xl">
+      <div class="flex flex-row p-4 rounded-t-md">
+        <Image src={LeftoversLogo} alt="Leftovers Logo" class="w-28 h-28" />
+        <div>
+          <h1 class="w-fit text-7xl px-5 font-medium text-off-white">
+            Leftovers
+          </h1>
+          <p class="w-fit text-xl px-6 font-light text-off-white">
+            Q2 2024 
+          </p>
+        </div>
+      </div> 
+      <div class="flex flex-row justify-end items-center px-4 my-2 w-full">
+        <div class="grid grid-flow-col auto-cols-max gap-4">
+          <p class="w-fit text-md font-medium text-off-white bg-off-white-transparent px-4 rounded-lg">
+            React
+          </p>
+          <p class="w-fit text-md font-medium text-off-white bg-off-white-transparent px-4 rounded-lg">
+            React Native
+          </p>
+          <p class="w-fit text-md font-medium text-off-white bg-off-white-transparent px-4 rounded-lg">
+            Firebase
+          </p>
+        </div>
+      </div>
     </div>
     <!-- Project Tile Body -->
-    <div class="flex flex-row w-full justify-between items-center p-4 mt-4">
-      <p class="w-1/2 text-md font-regular">
+    <div class="flex flex-row w-full rounded-b-md justify-between items-center p-4">
+      <p class="w-1/2 text-md font-regular text-off-white">
         Leftovers is a user-friendly app that helps individuals minimize food waste by tracking groceries and pantry contents, providing expiration date reminders, and suggesting recipes to optimize food usage.
       </p>
-      <div class="flex flex-col justify-between h-full w-1/4">
+      <div class="flex flex-col justify-between h-full w-1/4 py-4">
         <p>
           Github
         </p>
