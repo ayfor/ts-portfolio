@@ -1,20 +1,32 @@
+---
+// --- Components ---
+import Image from "astro/components/Image.astro";
+// --- Images ---
+import LeftoversLogo from "../content/images/LEFTOVERS_LOGO.png";
+---
 <div class="grid grid-cols-1 gap-10 w-full my-40">
-  
   <h1 class="relative bottom-4 right-12 text-9xl uppercase outlined text-transparent">Projects</h1>
-  <div class="min-h-content w-5/6 rounded-xl text-off-black font-regular bg-gradient-to-r from-blue-highlight/5 to-purple-highlight/5 shadow-md p-4">
-    <h1 class="w-fit text-4xl px-5 font-medium bg-off-white-transparent-dark backdrop-blur-md">
-      Leftovers
-    </h1>
+  <div class="flex flex-col min-h-content w-5/6 rounded-xl text-off-black font-regular shadow-md p-4">
+    <!-- Project Tile Header -->
+    <div class="h-40 flex flex-row">
+      <Image src={LeftoversLogo} alt="Leftovers Logo" class="w-36 h-36" />
+      <h1 class="w-fit text-7xl px-5 font-medium bg-off-white-transparent-dark backdrop-blur-md">
+        Leftovers
+      </h1>
+    </div>
+    <!-- Project Tile Body -->
     <div class="flex flex-row w-full justify-between items-center p-4 mt-4">
-      <p class="w-1/4 text-md font-regular">
-
+      <p class="w-1/2 text-md font-regular">
+        Leftovers is a user-friendly app that helps individuals minimize food waste by tracking groceries and pantry contents, providing expiration date reminders, and suggesting recipes to optimize food usage.
       </p>
-      <div class="flex flex-col w-3/4 ">
-        <p class="w-full p-3 text-md font-normal bg-off-white-transparent-dark backdrop-blur-md shadow-inner-xl rounded-md">
-          Leftovers is a user-friendly app that helps individuals minimize food waste by tracking groceries and pantry contents, providing expiration date reminders, and suggesting recipes to optimize food usage.
+      <div class="flex flex-col justify-between h-full w-1/4">
+        <p>
+          Github
+        </p>
+        <p>
+          Coming Soon
         </p>
       </div>
     </div>
   </div>
-
 </div>
