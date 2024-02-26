@@ -3,9 +3,13 @@
 import Image from "astro/components/Image.astro";
 // --- Images ---
 import LeftoversLogo from "../content/images/LEFTOVERS_LOGO.png";
+import PawsLogo from "../content/images/PAWS_LOGO.png";
 import RailsLogo from "../content/images/rails_logo.png";
 import RubyLogo from "../content/images/ruby_logo.png";
 import SqlLogo from "../content/images/sql_logo.png";
+import TypeScriptLogo from "../content/images/typescript_logo.png";
+import NextJsLogo from "../content/images/nextjs_logo.png";
+import VoxexLogo from "../content/images/VOXEX_LOGO.png";
 // --- Icons ---
 import Icon from "heroicons-astro/HeroIcon.astro";
 ---
@@ -15,7 +19,7 @@ import Icon from "heroicons-astro/HeroIcon.astro";
   <div class="flex flex-col items-center">
 
     <!-- Leftovers Project Card -->
-    <div class="flex flex-col min-h-content w-full xl:w-5/6 text-off-black font-regular rounded-md shadow-md bg-gradient-to-b from-off-black-transparent-regular to-off-black-transparent-light">
+    <div class="my-8 flex flex-col min-h-content w-full xl:w-5/6 text-off-black font-regular rounded-md shadow-md bg-gradient-to-b from-off-black-transparent-regular to-off-black-transparent-light">
       <!-- Project Tile Header -->
       <div class="h-fit-content flex flex-col bg-off-white-transparent drop-shadow-2xl">
         <div class="flex flex-row p-4 rounded-t-md">
@@ -57,9 +61,9 @@ import Icon from "heroicons-astro/HeroIcon.astro";
       <div class="flex flex-row w-full rounded-b-md justify-between items-center p-4">
         <p class="w-1/2 text-md font-regular text-off-white">
 
-          Leftover is a user-friendly app for minimizing food waste. It tracks groceries and pantry contents, sends expiration date reminders, and suggests recipes to optimize food usage.        </p>
-        <div class="flex flex-col justify-between h-full w-1/4 py-12 wide:py-4">
-          <a class="flex flex-row items-center text-off-white cursor-pointer duration-300 ease-in-out hover:scale-110">
+          Leftovers is a user-friendly app for minimizing food waste. It tracks groceries and pantry contents, sends expiration date reminders, and suggests recipes to optimize food usage.        </p>
+        <div class="grid grid-cols-1 gap-4 justify-start h-full w-1/4 py-12 wide:py-4">
+          <a class="flex flex-row items-center text-off-white cursor-pointer duration-300 ease-in-out hover:underline hover:underline-offset-4 hover:scale-95">
             <p>
               Github
             </p>
@@ -70,6 +74,96 @@ import Icon from "heroicons-astro/HeroIcon.astro";
           </p>
         </div>
       </div>
-  </div>
+    </div>
+
+    <!-- PAWs Project Card -->
+    <div class="my-8 flex flex-col min-h-content w-full xl:w-5/6 text-off-black font-regular rounded-md shadow-md bg-gradient-to-b from-off-black-transparent-regular to-off-black-transparent-light">
+      <!-- Project Tile Header -->
+      <div class="h-fit-content flex flex-col bg-off-white-transparent drop-shadow-2xl">
+        <div class="flex flex-row p-4 rounded-t-md">
+          <Image src={PawsLogo} alt="Paws Logo" class="w-28 h-28 rounded-xl" />
+          <div>
+            <h1 class="w-fit text-5xl wide:text-7xl px-5 font-medium text-off-white">
+              PAWS
+            </h1>
+            <p class="w-fit text-xl px-6 font-light text-off-white">
+              Q3 2024 
+            </p>
+          </div>
+        </div> 
+        <div class="flex flex-row justify-center md:justify-end items-center px-4 my-2 w-full">
+          <div class="grid grid-flow-col auto-cols-max gap-4">
+            <div class="w-fit flex flex-row items-center bg-off-white-transparent px-2 py-1 rounded-lg">
+              <Image src={TypeScriptLogo} alt="Typescript Logo" class="h-6 w-6 multi-col:w-5 multi-col:h-5" />
+              <p class="text-lg multi-col:text-md font-regular text-off-white pl-2">
+                TypeScript
+              </p>
+            </div>
+            <div class="w-fit flex flex-row items-center bg-off-white-transparent px-2 py-1 rounded-lg">
+              <Image src={NextJsLogo} alt="Next Js Logo" class="h-6 w-6 multi-col:w-5 multi-col:h-5" />
+              <p class="text-lg multi-col:text-md font-regular text-off-white pl-2">
+                Next.js
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project Tile Body -->
+      <div class="flex flex-row w-full rounded-b-md justify-between items-center p-4">
+        <p class="w-1/2 text-md font-regular text-off-white">
+          PAWS(Pet Adoption Website Service) is a white-label pet adoption service that enables small businesses and non-profits to effortlessly create customized adoption platforms, helping pets find their forever homes efficiently.
+        </p>
+        <div class="grid grid-cols-1 gap-4 justify-start h-full w-1/4 py-12 wide:py-4">
+          <a class="flex flex-row items-center text-off-white cursor-pointer duration-500 ease-in-out hover:underline hover:underline-offset-4 hover:scale-95">
+            <p>
+              Github
+            </p>
+            <Icon iconCode="link" iconStyle="outline" customClasses="ml-1 h-4 w-4" />
+          </a>
+          <p>
+            Coming Soon
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Voxex Project Card -->
+    <div class="my-8 flex flex-col min-h-content w-full xl:w-5/6 text-off-black font-regular rounded-md shadow-md bg-gradient-to-b from-off-black-transparent-regular to-off-black-transparent-light">
+      <!-- Project Tile Header -->
+      <div class="h-fit-content flex flex-col bg-off-white-transparent drop-shadow-2xl">
+        <div class="flex flex-row p-4 rounded-t-md">
+          <Image src={VoxexLogo} alt="Paws Logo" class="w-28 h-28 rounded-xl" />
+          <div>
+            <h1 class="w-fit text-5xl wide:text-7xl px-5 font-medium text-off-white">
+              Voxex
+            </h1>
+            <p class="w-fit text-xl px-6 font-light text-off-white">
+              Q4 2024 
+            </p>
+          </div>
+        </div> 
+        <div class="flex flex-row justify-center md:justify-end items-center px-4 my-2 w-full">
+          <div class="grid grid-flow-col auto-cols-max gap-4">
+            <div class="w-fit flex flex-row items-center bg-off-white-transparent px-2 py-1 rounded-lg">
+              <Icon iconCode="question-mark-circle" customClasses="h-6 w-6 text-off-white multi-col:w-5 multi-col:h-5" />
+              <p class="text-lg multi-col:text-md font-regular text-off-white pl-2">
+                TBD
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project Tile Body -->
+      <div class="flex flex-row w-full rounded-b-md justify-between items-center p-4">
+        <p class="w-1/2 text-md font-regular text-off-white">
+          An online platform offers a sophisticated solution for individuals and businesses seeking to access, showcase, and exchange premium 3D assets
+        </p>
+        <div class="grid grid-cols-1 gap-4 justify-start h-full w-1/4 py-12 wide:py-4">
+          <p>
+            Coming Soon
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
