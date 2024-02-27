@@ -2,8 +2,8 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 import typographyPlugin from '@tailwindcss/typography'
 
 module.exports = {
-	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,ttf}"],
-	plugins: [typographyPlugin],
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,ttf}", "./node_modules/flowbite/**/*.js"],
+	plugins: [typographyPlugin, require('flowbite/plugin')],
 	theme: {
 		colors: {
 			current: 'currentColor',
@@ -21,6 +21,10 @@ module.exports = {
 			'transparent': 'transparent',
 		},
 		extend: {
+			scale: {
+				'112': '1.12',
+				'115': '1.15',
+			},
 			boxShadow: {
 				'inner-xl': 'inset 2px 2px 4px 2px rgba(0, 0, 0, 0.02)',
 			},
