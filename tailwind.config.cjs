@@ -8,9 +8,11 @@ module.exports = {
 		colors: {
 			current: 'currentColor',
 			'off-white': '#FDFFFC',
+			'off-white-transparent-light': 'rgba(253, 255, 252, 0.05)',
 			'off-white-transparent': 'rgba(253, 255, 252, 0.1)',
 			'off-white-transparent-dark': 'rgba(253, 255, 252, 0.3)',
 			'off-black': '#040403',
+			'off-black-transparent-ultralight': 'rgba(4, 4, 3, 0.1)',
 			'off-black-transparent-light': 'rgba(4, 4, 3, 0.3)',
 			'off-black-transparent-regular': 'rgba(4, 4, 3, 0.4)',
 			'off-black-transparent-medium': 'rgba(4, 4, 3, 0.5)',
