@@ -23,6 +23,13 @@ module.exports = {
 			'transparent': 'transparent',
 		},
 		extend: {
+			rotate: {
+				'75': '75deg',
+				'105': '105deg',
+				'135': '135deg',
+				'150': '150deg',
+				'225': '225deg',
+			},
 			scale: {
 				'112': '1.12',
 				'115': '1.15',
@@ -47,6 +54,15 @@ module.exports = {
 				'152': '38rem',
 				'160': '40rem',
 			},
+			width: {
+				'110': '28rem',
+				'120': '30rem',
+				'128': '32rem',
+				'144': '36rem',
+				'152': '38rem',
+				'160': '40rem',
+				'200': '50rem',
+			},
 			maxWidth: {
 				'8xl': '88rem',
 				'9xl': '96rem',
@@ -54,6 +70,18 @@ module.exports = {
 			fontSize: {
 				'3.5xl': '2rem',
 				'3.75xl': '2.15rem',
+				'9xl': '7rem',
+				'10xl': '8rem',
+				'11xl': '9rem',
+				'12xl': '10rem',
+				'13xl': '11rem',
+				'14xl': '12rem',
+				'15xl': '13rem',
+				'16xl': '14rem',
+				'17xl': '15rem',
+				'18xl': '16rem',
+				'19xl': '17rem',
+				'20xl': '18rem'
 			},
 			animation: {
 				'fade-in': 'fadeIn 0.5s ease-in-out',
