@@ -8,6 +8,7 @@ import Sidebar from "../components/Sidebar.astro";
 // -- SVGs --
 import tssLogo from "../content/icons/ts-logo.svg?raw";
 import spruce from "../content/images/spruce-top.svg?raw"
+import AboutSection from '../components/AboutSection.astro';
 // -- Images --
 ---
 <!doctype html>
@@ -39,7 +40,7 @@ import spruce from "../content/images/spruce-top.svg?raw"
           </nav>
         </header>
         <!-- Main Content -->
-        <div class="isolate overflow-hidden bg-gradient-to-b from-blue-highlight/20">
+        <div class="isolate overflow-hidden bg-gradient-to-b from-blue-highlight/10">
           <div class="mx-8 ultra-wide:mx-[15%] max-w-xl wide:max-w-4xl ultra-wide:max-w-5xl py-24 md:mx-40 pb-24 pt-18 sm:pt-24 2xl:pt-36 sm:pb-32">
             <div class="inline md:grid-cols-1 lg:grid lg:justify-items-start lg:gap-x-2 lg:py-18">
               <!-- Hero Section -->
@@ -48,6 +49,8 @@ import spruce from "../content/images/spruce-top.svg?raw"
               <BusinessCard />
               <!-- Projects Section -->
               <ProjectsSection />
+              <!-- About Section -->
+              <AboutSection />
             </div>
           </div>
         </div>
