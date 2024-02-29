@@ -23,6 +23,9 @@ module.exports = {
 			'transparent': 'transparent',
 		},
 		extend: {
+			margin: {
+				22: '5.5rem',
+			},
 			rotate: {
 				'75': '75deg',
 				'105': '105deg',
