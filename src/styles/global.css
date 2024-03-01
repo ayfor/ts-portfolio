@@ -59,7 +59,3 @@
     -webkit-text-stroke: 3px #040403;
   }
 }
-
-html:not([data-scroll='0']) #home {
-  padding-top: 3em;
-}
