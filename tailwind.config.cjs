@@ -1,9 +1,9 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-import typographyPlugin from '@tailwindcss/typography'
+import typographyPlugin from '@tailwindcss/typography';
 
 module.exports = {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,ttf}", "./node_modules/flowbite/**/*.js"],
-	plugins: [typographyPlugin, require('flowbite/plugin')],
+	plugins: [typographyPlugin, require('@tailwindcss/forms'), require('flowbite/plugin')],
 	theme: {
 		colors: {
 			current: 'currentColor',

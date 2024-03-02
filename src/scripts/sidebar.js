@@ -1,6 +1,6 @@
 const HOME_SECTION_CUTOFF = 500;
 const PROJECTS_SECTION_CUTOFF = 2000;
-const ABOUT_SECTION_CUTOFF = 3000;
+const ABOUT_SECTION_CUTOFF = 2750;
 
 const homeIcon = document.querySelector('#home-icon svg');
 const projectsIcon = document.querySelector('#projects-icon svg');
@@ -30,6 +30,19 @@ const activateIcon = (icon) =>  {
         value.classList.remove('text-blue-highlight');
         
         value.classList.add('text-off-white');
+      }
+      return;
+    }
+
+    if (key === 'contact') {
+      if(icon === 'contact'){
+        value.classList.add('text-blue-highlight');
+
+        value.classList.remove('text-off-black');
+      } else {
+        value.classList.remove('text-blue-highlight');
+        
+        value.classList.add('text-off-black');
       }
       return;
     }
