@@ -1,11 +1,7 @@
----
-// -- SVGs --
-import tssLogo from "../content/icons/ts-logo.svg?raw";
----
-<div class="mt-32 mb-16">
-  <h1 class="relative bottom-0 right-2 sm:right-0 multi-col:right-16 text-7xl sm:text-8xl multi-col:text-10xl wide:text-12xl uppercase outlined text-transparent">Contact Me</h1>
+<div class="mt-32 mb-4">
+  <h1 id="contact-heading" class="relative bottom-0 right-2 sm:right-0 multi-col:right-16 text-7xl sm:text-8xl multi-col:text-10xl wide:text-12xl uppercase outlined text-transparent">Contact Me</h1>
   <div class="isolate bg-transparent px-6">
-    <form action="#" method="POST" class="mx-auto mt-4 max-w-xl sm:mt-20">
+    <form action="#" method="POST" class="mx-auto mt-4 max-w-3xl sm:mt-20">
       <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         <div>
           <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
@@ -48,12 +44,12 @@ import tssLogo from "../content/icons/ts-logo.svg?raw";
         <div class="sm:col-span-2">
           <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Message</label>
           <div class="mt-2.5">
-            <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-highlight/50 sm:text-sm sm:leading-6"></textarea>
+            <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-off-black caret-blue-highlight shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-highlight/50 sm:text-sm sm:leading-6"></textarea>
           </div>
         </div>
       </div>
       <div class="mt-10">
-        <button type="submit" class="block w-full rounded-md bg-blue-highlight/50 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-highlight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-highlight/50">Let's talk</button>
+        <button type="submit" class="block w-full rounded-md bg-blue-highlight/50 px-3.5 py-2.5 text-center text-lg font-semibold text-off-white bg-gradient-to-r from-blue-highlight/75 to-purple-highlight/75 hover:from-blue-highlight hover:to-purple-highlight ease-in-out duration-300 hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-highlight/50">Let's talk</button>
       </div>
     </form>
   </div>
