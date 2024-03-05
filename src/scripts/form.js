@@ -35,3 +35,18 @@ if (contactForm) {
 } else {
   console.error('Init Error: Form not found');
 } 
+
+const toastElement = document.getElementById('toast');
+const toastCloseButton = document.getElementById('toast-close-button');
+
+if (toastCloseButton) {
+  toastCloseButton.addEventListener('click', hideToast);
+}
+
+function hideToast() {
+  toastElement.classList.add('hidden');
+}
+
+function showToast() {
+  toastElement.classList.remove('hidden');
+}
