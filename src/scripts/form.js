@@ -3,9 +3,7 @@ const handleSubmit = async (event) => {
 
   const form = event.target;
   const formData = new FormData(form);
-  console.log(formData);
   const data = Object.fromEntries(formData.entries());
-  console.log('FORM: Submitted data', Object.fromEntries(formData.entries()));
 
   try {
     //TODO: CHECK IF ID CAN BE INCLUDED IN ENV FILE
@@ -19,8 +17,9 @@ const handleSubmit = async (event) => {
 
     // Handle response
     const result = await response.json();
-    console.log('FORM: Submission successful', result);
-    // Optionally, reset the form or redirect the user
+    if (Boolean(result.success)) {
+      showToast(); 
+    }
   } catch (error) {
     console.error('FORM: Submission failed', error);
   }
