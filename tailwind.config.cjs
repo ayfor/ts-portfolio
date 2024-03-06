@@ -92,7 +92,7 @@ module.exports = {
         'spin-xslow': 'spin 6s linear infinite',
 			},
 			screens: {
-				'multi-col': '1380px',
+				'multi-col': '1600px',
 				'wide': '1800px',
 				'ultra-wide': '2000px',
 			},
