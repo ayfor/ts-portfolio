@@ -31,8 +31,8 @@ const handleSubmit = async (event) => {
       submitButton.classList.add('cursor-not-allowed');
       submitButton.innerText = 'Thanks for reaching out!';
 
+      // Re-enable the submit button after 30 seconds
       setTimeout(() => {
-
         submitButton.classList.remove('pointer-events-none');
         submitButton.classList.remove('cursor-not-allowed');
         submitButton.innerText = "Send Message";
