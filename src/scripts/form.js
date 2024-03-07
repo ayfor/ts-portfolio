@@ -17,8 +17,26 @@ const handleSubmit = async (event) => {
 
     // Handle response
     const result = await response.json();
+    const submitButton = document.getElementById('contact-submit-button');
+    
     if (Boolean(result.success)) {
       showToast(); 
+
+      if (!submitButton) {
+        console.error('Form Error: Submit button not found');
+        return;
+      }
+      
+      submitButton.classList.add('pointer-events-none');
+      submitButton.classList.add('cursor-not-allowed');
+      submitButton.innerText = 'Thanks for reaching out!';
+
+      setTimeout(() => {
+
+        submitButton.classList.remove('pointer-events-none');
+        submitButton.classList.remove('cursor-not-allowed');
+        submitButton.innerText = "Send Message";
+      }, 30000);
     }
   } catch (error) {
     console.error('FORM: Submission failed', error);
@@ -49,3 +67,4 @@ function hideToast() {
 function showToast() {
   toastElement.classList.remove('hidden');
 }
+
