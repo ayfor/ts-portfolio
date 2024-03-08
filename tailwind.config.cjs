@@ -66,7 +66,11 @@ module.exports = {
 				'160': '40rem',
 				'200': '50rem',
 			},
+			minWidth: {
+				'3/10': '30%',
+			},
 			maxWidth: {
+				"3/8": "37.5%",
 				'8xl': '88rem',
 				'9xl': '96rem',
 			},
@@ -92,7 +96,8 @@ module.exports = {
         'spin-xslow': 'spin 6s linear infinite',
 			},
 			screens: {
-				'multi-col': '1600px',
+				'multi-col': '1300px',
+				'thin': '1580px',
 				'wide': '1800px',
 				'ultra-wide': '2000px',
 			},
