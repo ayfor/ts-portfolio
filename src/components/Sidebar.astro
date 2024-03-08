@@ -1,9 +1,53 @@
 ---
 import Icon from "heroicons-astro/HeroIcon.astro";
+// -- Images --
+import tssLogo from "../content/icons/ts-logo.svg?raw";
+
 ---
 <div>
+   <!-- Mobile Navbar  -->
+  <div class="fixed z-50 flex items-center multi-col:hidden cursor-pointer top-2 end-2">
+    <!-- Mobile menu button -->
+    <button id="side-menu-button" type="button" class="relative bg-off-white shadow-xl inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+      <!--
+        Icon when menu is closed.
+
+        Menu open: "hidden", Menu closed: "block"
+      -->
+      <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+      <!--
+        Icon when menu is open.
+
+        Menu open: "block", Menu closed: "hidden"
+      -->
+      <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div> 
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="fixed flex justify-center w-full inset-x-auto mt-24 multi-col:hidden z-50" id="mobile-menu">
+    <div class="flex flex-col justify-center w-11/12 bg-off-white rounded-lg shadow-xl">
+      <div class="w-full space-y-1 pb-3 pt-2">
+        <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
+        <a href="#" class="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700">Dashboard</a>
+        <a href="#" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Team</a>
+        <a href="#" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Projects</a>
+        <a href="#" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">Calendar</a>
+      </div>
+      <div class="border-t border-gray-200 pb-3 pt-4">
+        <div class="flex items-center px-4">
+          <div>
+            <div class="text-lg font-medium text-off-black">Twin Spruce Studio <span class="font-light text-base text-off-black-transparent-dark"> by Josh Stubbington </span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Desktop Navbar -->
   <div class="hidden multi-col:flex fixed inset-y-0 z-50 flex-col">
-    <!-- Sidebar component, swap this element with another sidebar if you like -->
     <div class="flex grow flex-col overflow-y-auto bg-transparent px-6">
       <nav class="flex flex-1 flex-col">
         <ul role="list" class="flex flex-1 flex-col gap-y-5 items-start justify-center">
