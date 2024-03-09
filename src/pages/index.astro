@@ -43,8 +43,8 @@ import ContactSection from '../components/ContactSection.astro';
         </header>
         <!-- Main Content -->
         <div class="isolate overflow-hidden bg-gradient-to-b from-blue-highlight/10">
-          <div class="mx-8 ultra-wide:mx-[15%] multi-col:min-w-content mult-col:max-w-3/8 thin:max-w-2xl wide:max-w-4xl ultra-wide:max-w-5xl py-24 md:mx-40 pb-24 pt-18 sm:pt-24 2xl:pt-36 sm:pb-32">
-            <div class="inline md:grid-cols-1 lg:grid lg:justify-items-start lg:gap-x-2 lg:py-18">
+          <div class="mx-8 ultra-wide:mx-[15%] multi-col:min-w-content multi-col:max-w-3/8 thin:max-w-2xl wide:max-w-4xl ultra-wide:max-w-5xl py-24 md:mx-40 pb-24 pt-18 sm:pt-24 2xl:pt-36 sm:pb-32">
+            <div class="inline grid-cols-1 lg:grid lg:justify-items-start lg:gap-x-2 lg:py-18">
               <!-- Hero Section -->
               <HeroSection />
               <!-- Business Card Section -->
@@ -66,6 +66,7 @@ import ContactSection from '../components/ContactSection.astro';
     </main>
     <script src="../scripts/sidebar.js"></script>
     <script src="../scripts/form.js"></script>
+    <script src="../scripts/mobile-sidebar.js"></script>
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>	
   </body>
 </html>
