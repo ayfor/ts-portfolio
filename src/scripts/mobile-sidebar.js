@@ -1,3 +1,5 @@
+
+
 // Get the side-menu-button element
 const sideMenuButton = document.getElementById('side-menu-button');
 
@@ -7,8 +9,13 @@ const mobileMenu = document.getElementById('mobile-menu');
 const hamburgerIcon = document.getElementById('hamburger-icon');
 const closeIcon = document.getElementById('close-icon');
 
+var isOpen = false;
+
 // Add click event listener to the side-menu-button
 sideMenuButton.addEventListener('click', () => {
+
+  isOpen = !isOpen;
+
   // Toggle the visibility of the mobile-menu element
   mobileMenu.classList.toggle('hidden');
 
@@ -27,5 +34,11 @@ sideMenuButton.addEventListener('click', () => {
 
     closeIcon.classList.remove('hidden');
     closeIcon.classList.add('block');
+  }
+});
+
+document.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    mobileMenu.classList.add('hidden');
   }
 });
