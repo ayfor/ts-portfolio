@@ -1,4 +1,4 @@
-
+const multiColScreenSize = 1300;
 
 // Get the side-menu-button element
 const sideMenuButton = document.getElementById('side-menu-button');
@@ -11,10 +11,7 @@ const closeIcon = document.getElementById('close-icon');
 
 var isOpen = false;
 
-// Add click event listener to the side-menu-button
-sideMenuButton.addEventListener('click', () => {
-
-  isOpen = !isOpen;
+const toggleMobileMenu = () => {
 
   // Toggle the visibility of the mobile-menu element
   mobileMenu.classList.toggle('hidden');
@@ -35,10 +32,14 @@ sideMenuButton.addEventListener('click', () => {
     closeIcon.classList.remove('hidden');
     closeIcon.classList.add('block');
   }
-});
 
-document.addEventListener('resize', () => {
-  if (window.innerWidth > 768) {
-    mobileMenu.classList.add('hidden');
-  }
+  isOpen = !isOpen;
+}
+
+// Event Listeners
+
+sideMenuButton.addEventListener('click', toggleMobileMenu);
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > multiColScreenSize && isOpen) toggleMobileMenu();
 });
