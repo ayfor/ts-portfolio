@@ -1,7 +1,7 @@
 ---
 import Icon from "heroicons-astro/HeroIcon.astro";
 // -- Images --
-import tssLogo from "../content/icons/ts-logo.svg?raw";
+import sideTssLogo from '../content/images/side_tss_logo.svg?raw';
 
 ---
 <div>
@@ -21,19 +21,19 @@ import tssLogo from "../content/icons/ts-logo.svg?raw";
   <div id="mobile-menu" class="fixed flex justify-center w-full inset-x-auto mt-24 hidden z-50" >
     <div class="flex flex-col justify-center w-11/12 bg-off-white rounded-lg shadow-xl">
       <div class="w-full space-y-1 pb-3 pt-2">
-        <a id="mobile-home-icon" href="#home" class="flex border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-off-black">
+        <a id="mobile-home-icon" href="#home" class="flex border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-off-black hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">
           <Icon iconCode="home" iconStyle="solid" customClasses="shrink-0 mr-2 h-5 w-5 text-sm font-medium text-off-black"/>
           Home
         </a>
-        <a id="mobile-projects-icon" href="#projects-heading" class="flex border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">
+        <a id="mobile-projects-icon" href="#projects-heading" class="flex border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-off-black hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">
           <Icon iconCode="cube" iconStyle="outline" customClasses="shrink-0 mr-2 h-5 w-5 text-sm font-medium text-off-black"/>
           Projects
         </a>
-        <a id="mobile-about-icon" href="#about-heading" class="flex border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">
+        <a id="mobile-about-icon" href="#about-heading" class="flex border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-off-black hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">
           <Icon iconCode="user" iconStyle="solid" customClasses="shrink-0 mr-2 h-5 w-5 text-sm font-medium text-off-black"/>
           About
         </a>
-        <a id="mobile-contact-icon" href="#contact-heading" class="flex border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">
+        <a id="mobile-contact-icon" href="#contact-heading" class="flex border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-off-black hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">
           <Icon iconCode="bell" iconStyle="outline" customClasses="shrink-0 mr-2 h-5 w-5 text-sm font-medium text-off-black"/>
           Contact
         </a>
@@ -41,7 +41,15 @@ import tssLogo from "../content/icons/ts-logo.svg?raw";
       <div class="border-t border-gray-200 pb-3 pt-4">
         <div class="flex items-center px-4">
           <div>
-            <div class="text-lg font-medium text-off-black">Twin Spruce Studio <span class="font-light text-base text-off-black-transparent-dark"> by Josh Stubbington </span></div>
+            <div class="flex justify-start items-center text-lg font-medium text-off-black">
+              <div class="inline h-6 w-8 mr-2">
+                <Fragment set:html={sideTssLogo} alt="Twin Pines Studio Logo" />
+              </div>
+              <div>
+                Twin Spruce Studio 
+                <span class="font-light text-base text-off-black-transparent-dark"> by Josh Stubbington </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
