@@ -1,6 +1,6 @@
 const HOME_SECTION_CUTOFF = 500;
 const PROJECTS_SECTION_CUTOFF = 2000;
-const ABOUT_SECTION_CUTOFF = 2650;
+const ABOUT_SECTION_CUTOFF = 3000;
 
 const homeIcon = document.querySelector('#home-icon svg');
 const projectsIcon = document.querySelector('#projects-icon svg');
