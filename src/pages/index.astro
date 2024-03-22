@@ -8,6 +8,7 @@ import Sidebar from "../components/Sidebar.astro";
 // -- SVGs --
 import tssLogo from "../content/icons/ts-logo.svg?raw";
 import spruce from "../content/images/spruce-top.svg?raw"
+import spruceBottom from "../content/images/spruce-bottom.svg?raw"
 import AboutSection from '../components/AboutSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 // -- Imports --
@@ -28,7 +29,7 @@ import { ViewTransitions } from "astro:transitions";
         <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
       </div>
       <!-- Spruce Asset -->
-      <div class="absolute -top-[15%] left-[25%] wide:left-[35%] -z-5 w-200 rotate-135 overflow-clip">
+      <div class="absolute -top-[15%] left-[25%] wide:left-[35%] -z-5 w-200 rotate-135 overflow-hidden">
         <Fragment set:html={spruce} alt="Spruce" />
       </div>
       <!-- Content -->
@@ -46,7 +47,7 @@ import { ViewTransitions } from "astro:transitions";
         <!-- Main Content -->
         <div class="isolate overflow-hidden bg-gradient-to-b from-blue-highlight/10">
           <div class="mx-8 ultra-wide:mx-[15%] multi-col:min-w-content multi-col:max-w-3/8 thin:max-w-2xl wide:max-w-4xl ultra-wide:max-w-5xl py-24 md:mx-40 pb-24 pt-18 sm:pt-24 2xl:pt-36 sm:pb-32">
-            <div class="inline grid-cols-1 lg:grid lg:justify-items-start lg:gap-x-2 lg:py-18">
+            <div class="w-full inline grid-cols-1 justify-center multi-col:grid multi-col:justify-items-start lg:gap-x-2 lg:py-18">
               <!-- Hero Section -->
               <HeroSection />
               <!-- Business Card Section -->
@@ -64,6 +65,13 @@ import { ViewTransitions } from "astro:transitions";
       <!--Lower Background Gradient -->
       <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
         <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-purple-highlight opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+      <div class="absolute inset-x-0 top-[calc(100%+13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%)] rotate-90" aria-hidden="true">
+        <div class="relative left-[calc(105%+3rem)] aspect-[1155/678] w-[32rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-purple-highlight opacity-30 sm:left-[calc(50%+50rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+      <!-- Lower Spruce Asset -->
+      <div class="absolute -bottom-[calc(225%+185rem)] sm:-bottom-[calc(225%+175rem)] md:-bottom-[calc(225%+170rem)] xl:-bottom-[calc(175%+185rem)] right-[calc(5%)] w-160 multi-col:-bottom-[calc(175%+155rem)] multi-col:right-[calc(25rem)] -z-10 multi-col:w-200 rotate-45 overflow-hidden">
+        <Fragment set:html={spruceBottom} alt="Spruce" />
       </div>
     </main>
     <script src="../scripts/sidebar.js"></script>

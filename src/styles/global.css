@@ -58,4 +58,9 @@
     margin: 0;
     -webkit-text-stroke: 3px #040403;
   }
+
+	html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+	}	
 }
