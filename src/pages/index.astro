@@ -10,13 +10,15 @@ import tssLogo from "../content/icons/ts-logo.svg?raw";
 import spruce from "../content/images/spruce-top.svg?raw"
 import AboutSection from '../components/AboutSection.astro';
 import ContactSection from '../components/ContactSection.astro';
-// -- Images --
+// -- Imports --
+import { ViewTransitions } from "astro:transitions";
 ---
 <!doctype html>
 <html lang="en">
   <title>Twin Spruce Studio</title>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <ViewTransitions />
 	</head>
 	<body >
     <Sidebar />
