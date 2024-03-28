@@ -10,6 +10,7 @@ import xLogo from "../content/icons/contacts/x-logo.svg?raw";
 // -- Images --
 import LeftoversLogo from "../content/images/LEFTOVERS_LOGO.png";
 import PawsLogo from "../content/images/PAWS_LOGO.png";
+import Memoji from "../content/images/memoji.png";
 // import topographImg from "../content/images/vector-black-topographic-map-lines-background.jpg";
 ---
 <div class="w-full max-w-2xl flex justify-center my-6 mx-auto multi-col:fixed multi-col:justify-end multi-col:right-1/20 2xl:right-1/10 multi-col:my-0 multi-col:mx-0">
@@ -22,17 +23,22 @@ import PawsLogo from "../content/images/PAWS_LOGO.png";
         </div> -->
         <div class="flex flex-col w-full">
           <!-- Spinner -->
-          <div class="mx-6 absolute h-12 w-12 grid grid-cols-2 gap-cols-px justify-items-center animate-spin-slow">
-            <div class="relative ml-2 bg-blue-highlight rounded-full h-12 w-12 blur-lg"></div>
-            <div class="relative mr-2 bg-purple-highlight rounded-full h-12 w-12 blur-lg"></div>
-            <!-- <div class="relative -mt-12 bg-red-highlight rounded-full h-12 w-12 blur-lg"></div> -->
+          <div>
+            <div class="absolute z-10 inset-x-auto inset-y-auto bg-off-white-transparent-dark rounded-full flex items-center justify-center">
+              <Image src={Memoji} alt="Personal Memoji" class="h-14 w-14" />
+            </div>
+            <div class="absolute h-12 w-12 grid grid-cols-3 gap-cols-px justify-items-center animate-spin-slow">
+              <div class="relative bg-blue-highlight rounded-full h-12 w-12 blur-xl"></div>
+              <div class="relative bg-purple-highlight rounded-full h-12 w-12 blur-xl"></div>
+              <div class="relative bg-red-highlight rounded-full h-12 w-12 blur-2xl"></div>
+            </div>
           </div>
-          <div class="mb-8 flex flex-row justify-end">
+          <div class="flex flex-row justify-end items-center h-14">
             <h1 class="uppercase text-3xl font-bold">
               Josh Stubbington
             </h1>
           </div>
-          <div class="flex flex-row justify-between px-1">
+          <div class="flex flex-row justify-between mt-4 px-1">
             <p class="text-xs leading-5 font-medium">
               Mechanical Engineer → Software Developer
             </p>
