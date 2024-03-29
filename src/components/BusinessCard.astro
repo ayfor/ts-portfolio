@@ -2,7 +2,6 @@
 // --- Components ---
 import Image from "astro/components/Image.astro";
 // -- SVGs -- 
-import devLogo from "../content/icons/command-line-logo.svg?raw";
 import githubLogo from "../content/icons/contacts/github-logo.svg?raw";
 import linkedinLogo from "../content/icons/contacts/linkedin-logo.svg?raw";
 import gumroadLogo from "../content/icons/contacts/gumroad-logo.svg?raw";
@@ -13,7 +12,7 @@ import PawsLogo from "../content/images/PAWS_LOGO.png";
 import Memoji from "../content/images/memoji.png";
 // import topographImg from "../content/images/vector-black-topographic-map-lines-background.jpg";
 ---
-<div class="w-full max-w-2xl flex justify-center my-6 mx-auto multi-col:fixed multi-col:justify-end multi-col:right-1/20 2xl:right-1/10 multi-col:my-0 multi-col:mx-0">
+<div class="w-full max-w-2xl flex justify-center my-6 mx-auto multi-col:fixed multi-col:right-1/20 2xl:right-1/10 multi-col:my-0 multi-col:mx-0 pointer-events-auto h-fit">
   <div class="w-full flex flex-col justify-between items-center">
     <!-- Business Card -->
     <div class="flex flex-col justify-between rounded-2xl backdrop-blur-md bg-off-black-transparent-dark border-4 border-off-white-transparent/10 shadow-lg w-full multi-col:min-w-fit multi-col:w-112 h-96 p-6 text-off-white">
@@ -80,7 +79,7 @@ import Memoji from "../content/images/memoji.png";
       </div>
     </div>
     <!-- Pinned Projects -->
-    <div class="w-full multi-col:min-w-fit multi-col:w-112 my-3 sm:my-7 wide:my-22 backdrop-blur-lg border-4 border-blue-highlight/20 bg-off-white-transparent p-4 rounded-2xl shadow-xl">
+    <div class="w-full multi-col:min-w-fit multi-col:w-112 mt-3 sm:mt-7 wide:mt-22 backdrop-blur-lg border-4 border-blue-highlight/20 bg-off-white-transparent p-4 rounded-2xl shadow-xl">
       <h2 class="font-bold text-2xl">
         Pinned Projects
       </h2>
