@@ -23,8 +23,8 @@ import Memoji from "../content/images/memoji.png";
         <div class="flex flex-col w-full">
           <!-- Spinner -->
           <div>
-            <div class="absolute z-10 inset-x-auto inset-y-auto bg-off-white-transparent-dark rounded-full flex items-center justify-center">
-              <Image src={Memoji} alt="Personal Memoji" class="h-16 w-16" />
+            <div class="absolute z-10 inset-x-auto inset-y-auto bg-off-white-transparent-dark rounded-full flex items-center justify-center h-16 w-16">
+              <Image src={Memoji} alt="Personal Memoji" />
             </div>
             <div class="absolute h-12 w-12 grid grid-cols-3 gap-cols-px justify-items-center animate-spin-slow">
               <div class="relative bg-blue-highlight rounded-full h-12 w-12 blur-xl"></div>
@@ -33,7 +33,7 @@ import Memoji from "../content/images/memoji.png";
             </div>
           </div>
           <div class="flex flex-row justify-end items-center h-14">
-            <h1 class="uppercase text-3xl font-bold">
+            <h1 class="uppercase text-lg sm:text-3xl font-bold sm:text-right text-left">
               Josh Stubbington
             </h1>
           </div>
@@ -69,11 +69,11 @@ import Memoji from "../content/images/memoji.png";
           <span class="ml-2 inline">Shop on Gumroad</span>
         </a>
       </div>
-      <div class="grid grid-row-2 gap-4 h-fit mx-2 font-semibold">
-        <a href="./Joshua_Stubbington_Resume.pdf" target="_blank" class="flex justify-center items-center w-full h-12 rounded-md bg-transparent border-solid border-2 border-off-white-transparent-dark hover:border-blue-highlight shadow-sm hover:shadow-md ease-in-out duration-300 hover:scale-105 active:scale-95 transition">
-          Download Resume
+      <div class="grid grid-cols-2 sm:grid-rows-2 sm:grid-cols-1 gap-4 h-fit mx-2 font-semibold">
+        <a href="./Joshua_Stubbington_Resume.pdf" target="_blank" class="text-sm text-center sm:text-lg flex justify-center items-center w-full h-12 rounded-md bg-transparent border-solid border-2 border-off-white-transparent-dark hover:border-blue-highlight shadow-sm hover:shadow-md ease-in-out duration-300 hover:scale-105 active:scale-95 transition">
+          My Resume
         </a>
-        <a href="#contact-heading" class="flex justify-center items-center w-full h-12 rounded-md bg-off-white-transparent hover:bg-purple-highlight hover:shadow-md ease-in-out duration-300 hover:scale-105 active:scale-95 transition">
+        <a href="#contact-heading" class="text-sm text-center sm:text-lg flex justify-center items-center w-full h-12 rounded-md bg-off-white-transparent hover:bg-purple-highlight hover:shadow-md ease-in-out duration-300 hover:scale-105 active:scale-95 transition">
           Contact Me
         </a>
       </div>
