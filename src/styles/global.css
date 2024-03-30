@@ -59,7 +59,7 @@
     -webkit-text-stroke: 3px #040403;
   }
 
-	html, body {
+	html, body{
     max-width: 100%;
     overflow-x: hidden;
 	}	
