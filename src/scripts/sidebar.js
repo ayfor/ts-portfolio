@@ -2,6 +2,8 @@ const HOME_SECTION_CUTOFF = 500;
 const PROJECTS_SECTION_CUTOFF = 2000;
 const ABOUT_SECTION_CUTOFF = 3000;
 
+const MULTI_COL_CUTOFF_WIDTH_PIXELS = 1300;
+
 const homeIcon = document.querySelector('#home-icon svg');
 const projectsIcon = document.querySelector('#projects-icon svg');
 const aboutIcon = document.querySelector('#about-icon svg');
@@ -148,6 +150,9 @@ const activateMobileSection = (section) => {
 
 const setIconDisplay = () => {
   const scrollPosition = Number(window.scrollY);
+
+  const SECTION_SINGLE_COL_ADJUSTMENT = window.innerWidth > MULTI_COL_CUTOFF_WIDTH_PIXELS ? 150 : 0;
+
   switch (true) {
     case (scrollPosition < HOME_SECTION_CUTOFF):
       activateIcon('home');
@@ -159,7 +164,7 @@ const setIconDisplay = () => {
       activateMobileIcon('projects');
       activateMobileSection('projects');
       break;
-    case (scrollPosition >= PROJECTS_SECTION_CUTOFF && scrollPosition < ABOUT_SECTION_CUTOFF):
+    case (scrollPosition >= PROJECTS_SECTION_CUTOFF && scrollPosition < (ABOUT_SECTION_CUTOFF + SECTION_SINGLE_COL_ADJUSTMENT)):
       activateIcon('about');
       activateMobileIcon('about');
       activateMobileSection('about');
