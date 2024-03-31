@@ -37,11 +37,11 @@ import Memoji from "../content/images/memoji.png";
               Josh Stubbington
             </h1>
           </div>
-          <div class="flex flex-row justify-between mt-4 px-1">
-            <p class="text-xs leading-5 font-medium">
+          <div class="flex flex-col sm:flex-row justify-between mt-4 px-1">
+            <p class="text-xs leading-5 font-medium my-2 sm:m-0">
               Mechanical Engineer → Software Developer
             </p>
-            <p class="text-sm font-medium">
+            <p class="text-sm font-medium my-2 sm:m-0">
               Ottawa, Ontario
             </p>
           </div>
@@ -51,7 +51,7 @@ import Memoji from "../content/images/memoji.png";
       <!-- <div class="w-full h-36 rounded-xl mt-2 mb-6">
         <Image src={topographImg} alt="Topographic Map" class="object-cover h-full w-full rounded-xl" />
       </div> -->
-      <div class="grid grid-cols-2 gap-4 my-2">
+      <div class="hidden sm:grid grid-cols-2 gap-4 my-2">
         <a href="https://github.com/ayfor" target="_blank" class="flex items-center px-3 py-2 text-sm hover:shadow-lg hover:bg-off-white-transparent rounded-md cursor-pointer ease-in-out duration-300 hover:scale-105 transition">
           <Fragment set:html={githubLogo} alt="GitHub Logo"/>
           <span class="ml-2 inline">Follow on GitHub</span>
@@ -69,12 +69,30 @@ import Memoji from "../content/images/memoji.png";
           <span class="ml-2 inline">Shop on Gumroad</span>
         </a>
       </div>
-      <div class="grid grid-cols-2 sm:grid-rows-2 sm:grid-cols-1 gap-4 h-fit mx-2 font-semibold">
+      <div class="grid grid-rows-2 grid-cols-1 gap-4 h-fit mx-2 font-semibold">
         <a href="./Joshua_Stubbington_Resume.pdf" target="_blank" class="text-sm text-center sm:text-lg flex justify-center items-center w-full h-12 rounded-md bg-transparent border-solid border-2 border-off-white-transparent-dark hover:border-blue-highlight shadow-sm hover:shadow-md ease-in-out duration-300 hover:scale-105 active:scale-95 transition">
           My Resume
         </a>
         <a href="#contact-heading" class="text-sm text-center sm:text-lg flex justify-center items-center w-full h-12 rounded-md bg-off-white-transparent hover:bg-purple-highlight hover:shadow-md ease-in-out duration-300 hover:scale-105 active:scale-95 transition">
           Contact Me
+        </a>
+      </div>
+      <div class="grid grid-cols-4 gap-2 my-0 sm:hidden">
+        <a href="https://github.com/ayfor" target="_blank" class="flex items-center justify-center sm:w-full px-3 py-2 text-sm hover:shadow-lg hover:bg-off-white-transparent rounded-md cursor-pointer ease-in-out duration-300 hover:scale-105 transition">
+          <Fragment  set:html={githubLogo} alt="GitHub Logo"/>
+          <span class="ml-2 hidden sm:inline ">Follow on GitHub</span>
+        </a> 
+        <a href="https://www.linkedin.com/in/joshua-stubbington/" target="_blank" class="flex items-center justify-center sm:w-full px-3 py-2 text-sm hover:shadow-lg hover:bg-off-white-transparent rounded-md cursor-pointer ease-in-out duration-300 hover:scale-105 transition">
+          <Fragment  set:html={linkedinLogo} alt="LinkedIn Logo"/>
+          <span class="ml-2 hidden sm:inline">Connect on LinkedIn</span>
+        </a>
+        <a href="https://twitter.com/joshstubbington" target="_blank" class="flex items-center justify-center sm:w-full px-3 py-2 text-sm hover:shadow-lg hover:bg-off-white-transparent rounded-md cursor-pointer ease-in-out duration-300 hover:scale-105 transition">
+          <Fragment  set:html={xLogo} alt="X Logo"/>
+          <span class="ml-2 hidden sm:inline">Follow on X</span>
+        </a>
+        <a href="https://stubbington.gumroad.com/subscribe" target="_blank" class="flex items-center justify-center sm:w-full px-3 py-2 text-sm hover:shadow-lg hover:bg-off-white-transparent rounded-md cursor-pointer ease-in-out duration-300 hover:scale-105 transition">
+          <Fragment  set:html={gumroadLogo} alt="Gumroad Logo" class:list={['shrink-0']}/>
+          <span class="ml-2 hidden sm:inline">Shop on Gumroad</span>
         </a>
       </div>
     </div>
