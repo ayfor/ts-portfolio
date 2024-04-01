@@ -8,7 +8,7 @@ import sideTssLogo from '../content/images/side_tss_logo.svg?raw';
    <!-- Mobile Navbar  -->
   <div class="fixed z-50 flex items-center multi-col:hidden cursor-pointer top-6 end-6">
     <!-- Mobile menu button -->
-    <button id="side-menu-button" type="button" class="relative backdrop-blur bg-gradient-to-b to-off-black-transparent-ultralight from-off-black-transparent-light from-50% shadow-inner shadow-2xl inline-flex items-center justify-center rounded-xl p-2 text-off-white hover:bg-gray-100 focus:outline-none ring-2 ring-off-black-transparent-light focus:ring-inset focus:ring-off-black-transparent-medium" aria-controls="mobile-menu" aria-expanded="false">
+    <button id="side-menu-button" type="button" class="relative backdrop-blur bg-gradient-to-b to-off-black-transparent-ultralight from-off-black-transparent-light from-50% shadow-inner shadow-2xl inline-flex items-center justify-center rounded-xl p-2 text-off-white hover:bg-gray-100 focus:outline-none ring-2 ring-off-black-transparent-light focus:ring-inset focus:ring-off-black-transparent-medium animate__animated animate__slideInRight animate__faster" aria-controls="mobile-menu" aria-expanded="false">
       <svg id="hamburger-icon" class="block h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
       </svg>
@@ -18,7 +18,7 @@ import sideTssLogo from '../content/images/side_tss_logo.svg?raw';
     </button>
   </div> 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div id="mobile-menu" class="fixed flex justify-center w-full inset-x-auto mt-24 hidden z-50" >
+  <div id="mobile-menu" class="fixed flex justify-center w-full inset-x-auto mt-24 hidden z-50 animate__animated animate__slideInDown animate__faster" >
     <div class="flex flex-col justify-center w-11/12 bg-off-white rounded-lg shadow-xl">
       <div class="w-full space-y-1 pb-3 pt-2">
         <a id="mobile-home-icon" href="#home" class="flex border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-off-black hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">
@@ -56,7 +56,7 @@ import sideTssLogo from '../content/images/side_tss_logo.svg?raw';
     </div>
   </div>
   <!-- Desktop Navbar -->
-  <div class="hidden multi-col:flex fixed inset-y-0 z-50 flex-col">
+  <div class="hidden multi-col:flex fixed inset-y-0 z-50 flex-col animate__animated animate__slideInLeft">
     <div class="flex grow flex-col overflow-y-auto bg-transparent px-6">
       <nav class="flex flex-1 flex-col">
         <ul role="list" class="flex flex-1 flex-col gap-y-5 items-start justify-center">
