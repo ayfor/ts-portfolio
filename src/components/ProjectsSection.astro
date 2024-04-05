@@ -16,13 +16,13 @@ import Icon from "heroicons-astro/Heroicon.astro";
 import SpruceTotem from "../content/images/spruce-totem.svg?raw";
 import SpruceTotemPurple from "../content/images/spruce-totem-p.svg?raw";
 ---
-<div class="grid grid-cols-1 gap-10 w-full my-40">
-  <h1 id="projects-heading" class="relative bottom-4 right-2 sm:right-0 multi-col:right-16 text-[4.25rem] sm:text-8xl multi-col:text-10xl wide:text-11xl uppercase outlined text-transparent">
+<div class="grid grid-cols-1 z-10 w-full my-40 py-12 bg-off-white-transparent shadow-inner shadow-xl rounded-xl">
+  <h1 id="projects-heading" class="p-6 m-16 rounded-xl max-w-content bg-off-white-transparent-dark text-center text-[4.25rem] sm:text-8xl multi-col:text-10xl wide:text-11xl uppercase text-off-black font-black">
     Projects
   </h1>
   
   <div class="relative -left-24">
-    <div class="absolute -z-15 top-0 w-100 multi-col:w-128 h-auto rotate-150 blur-2xl">
+    <div class="absolute -z-10 top-0 w-100 multi-col:w-128 h-auto rotate-150 blur-2xl">
       <Fragment set:html={SpruceTotemPurple} class="h-16 w-auto"/>
     </div>
     <div class="absolute -z-10 top-0 w-100 multi-col:w-128 h-auto rotate-150 blur-2xl animate-pulse">
@@ -33,7 +33,7 @@ import SpruceTotemPurple from "../content/images/spruce-totem-p.svg?raw";
   <div class="flex flex-col items-center">
 
     <!-- Leftovers Project Card -->
-    <div id="pinned-project-1" class="my-8 flex flex-col min-h-content w-full wide:w-3/4 text-off-black font-regular rounded-xl shadow-md backdrop-blur-md bg-gradient-to-b from-purple-highlight/30 to-off-white-transparent-light to-50% animate__animated animate__fadeIn">
+    <div id="pinned-project-1" class="my-8 flex flex-col min-h-content w-full wide:w-3/4 text-off-black font-regular rounded-xl shadow-md backdrop-blur-md bg-gradient-to-b from-purple-highlight/30 to-off-white-transparent-light to-50% animate__animated animate__fadeInRight">
       <!-- Project Tile Header -->
       <div class="h-fit-content flex flex-col drop-shadow-2xl">
         <div class="flex flex-row p-4 rounded-t-md">
@@ -92,7 +92,7 @@ import SpruceTotemPurple from "../content/images/spruce-totem-p.svg?raw";
     </div>
 
     <!-- PAWs Project Card -->
-    <div id="pinned-project-2" class="my-8 flex flex-col min-h-content w-full wide:w-3/4 text-off-black font-regular rounded-xl shadow-md backdrop-blur-md bg-gradient-to-b from-blue-highlight/25 to-to-off-white-transparent-light to-50% animate__animated animate__fadeIn">
+    <div id="pinned-project-2" class="my-8 flex flex-col min-h-content w-full wide:w-3/4 text-off-black font-regular rounded-xl shadow-md backdrop-blur-md bg-gradient-to-b from-blue-highlight/25 to-to-off-white-transparent-light to-50% animate__animated animate__fadeInRight">
       <!-- Project Tile Header -->
       <div class="h-fit-content flex flex-col drop-shadow-2xl">
         <div class="flex flex-row p-4 rounded-t-md">
@@ -144,7 +144,7 @@ import SpruceTotemPurple from "../content/images/spruce-totem-p.svg?raw";
       </div>
     </div>
     <!-- Voxex Project Card -->
-    <div class="my-8 flex flex-col min-h-content w-full wide:w-3/4 text-off-black font-regular rounded-xl shadow-md backdrop-blur-md bg-gradient-to-b from-red-highlight/25 from-10% to-off-white-transparent-light to-50% animate__animated animate__fadeIn">
+    <div class="my-8 flex flex-col min-h-content w-full wide:w-3/4 text-off-black font-regular rounded-xl shadow-md backdrop-blur-md bg-gradient-to-b from-red-highlight/25 from-10% to-off-white-transparent-light to-50% animate__animated animate__fadeInRight">
       <!-- Project Tile Header -->
       <div class="h-fit-content flex flex-col drop-shadow-2xl">
         <div class="flex flex-row p-4 rounded-t-md">
